@@ -16,4 +16,7 @@ RUN chmod +x /app/run_bot.sh
 WORKDIR /app
 VOLUME /config
 
+# Copy the config.txt file into the container
+COPY config.txt /app/config.txt
+
 CMD ["./run_bot.sh"]
